@@ -1,4 +1,4 @@
-package com.sda.weather.userinterface;
+package com.sda.weather.userinterface; // todo you changed this line but a package name is still the same
 
 import java.util.Scanner;
 
@@ -11,9 +11,9 @@ public class UserInterface {
         while (true) {    //Main UserInterface loop.
             System.out.println("Weather App");
             System.out.println("What do you want to do?");
-            System.out.println("1. Add a localization to database.");
-            System.out.println("2. Show database.");
-            System.out.println("3. Show weather details from weather service.");
+            System.out.println("1. Add a localization to database."); // todo just add a localization
+            System.out.println("2. Show database."); // todo change this message, we want to obtain an information about our localizations
+            System.out.println("3. Show weather details from weather service."); // todo it's a weather forecast
             System.out.println("4. Close app.");
 
             int decision = keyboard.nextInt();

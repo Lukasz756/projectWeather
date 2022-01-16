@@ -1,4 +1,4 @@
-package com.sda.weather.UserInterface; // todo userinterface, frontend
+package com.sda.weather.userinterface;
 
 import java.util.Scanner;
 
@@ -14,7 +14,7 @@ public class UserInterface {
             System.out.println("1. Add a localization to database.");
             System.out.println("2. Show database.");
             System.out.println("3. Show weather details from weather service.");
-            // todo how to close an application
+            System.out.println("4. Close app.");
 
             int decision = keyboard.nextInt();
 
@@ -25,17 +25,21 @@ public class UserInterface {
                 case 2:
                     getAllLocalizations();
                     break;
-                case 3: // todo wrong behavoiur
+                case 3:
+                    getWeatherDetails();
+                    break;
+                case 4:
                     return;
             }
         }
     }
 
+    private void getWeatherDetails() {
+    }
+
     private void createLocalization() {
-        // todo
     }
 
     private void getAllLocalizations() {
-        // todo
     }
 }

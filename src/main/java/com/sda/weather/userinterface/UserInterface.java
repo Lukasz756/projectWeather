@@ -2,7 +2,7 @@ package com.sda.weather.userinterface;
 
 import java.util.Scanner;
 
-public class userInterface { // todo UserInterface
+public class UserInterface {
 
     public void run() {
         System.out.println("Weather App is running.\n");

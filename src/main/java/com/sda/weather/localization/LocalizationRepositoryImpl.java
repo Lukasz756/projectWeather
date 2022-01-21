@@ -1,4 +1,4 @@
-package com.sda.weather.Localization;
+package com.sda.weather.localization;
 
 import lombok.RequiredArgsConstructor;
 import org.hibernate.Session;
@@ -12,15 +12,7 @@ public class LocalizationRepositoryImpl implements LocalizationRepository {
 
     private final SessionFactory sessionFactory;
 
-    @Override
-    public List<Localization> findAll() { // todo remove it, it isn't a part of our functionality
-        Session session = sessionFactory.openSession();
-        Transaction transaction = session.beginTransaction();
-        List<Localization> localizations = session.createQuery("FROM Localization", Localization.class).getResultList();
-        transaction.commit();
-        session.close();
-        return localizations;
-    }
+
 
     @Override
     public Localization add(Localization localization) {
@@ -29,6 +21,6 @@ public class LocalizationRepositoryImpl implements LocalizationRepository {
         session.persist(localization);
         transaction.commit();
         session.close();
-        return null; // todo why null?
+        return localization;
     }
 }

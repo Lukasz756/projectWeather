@@ -1,4 +1,4 @@
-package com.sda.weather.Localization;
+package com.sda.weather.localization;
 
 import lombok.Data;
 
@@ -9,5 +9,5 @@ public class LocalizationDTO {
     private String country;
     private int longitude;
     private int latitude;
-    // todo where is a region
+    private String region;
 }

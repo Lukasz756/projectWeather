@@ -9,4 +9,5 @@ public class LocalizationDTO {
     private String country;
     private int longitude;
     private int latitude;
+    // todo where is a region
 }

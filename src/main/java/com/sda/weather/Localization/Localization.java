@@ -1,4 +1,4 @@
-package com.sda.weather.Localization;
+package com.sda.weather.Localization; // todo rename to localization
 
 import lombok.Data;
 
@@ -10,12 +10,13 @@ import javax.persistence.Id;
 @Data
 @Entity
 public class Localization {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     private Long id;
     private String city;
     private String country;
     private int longitude;
     private int latitude;
+    // todo where is a region
 }

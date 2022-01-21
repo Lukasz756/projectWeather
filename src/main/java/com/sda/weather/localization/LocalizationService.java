@@ -7,13 +7,12 @@ import lombok.RequiredArgsConstructor;
 public class LocalizationService {
 
     private final LocalizationRepository localizationRepository;
-
-
+    private final ObjectMapper objectMapper;
 
     Localization createLocalization(String city, String country, int longitude, int latitude, String region) {
         if (city == null || country == null || region == null || city.isBlank() || country.isBlank() ||
-                region.isBlank() || longitude > 180 || longitude < 0 || latitude > 90 || latitude < 0){
-                throw new IllegalArgumentException("Data validation failed.");  // data validation
+                region.isBlank() || longitude > 180 || longitude < 0 || latitude > 90 || latitude < 0) {
+            throw new IllegalArgumentException("Data validation failed.");  // data validation
         }
         Localization localization = new Localization();
         localization.setCity(city);
